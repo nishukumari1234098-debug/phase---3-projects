@@ -3,15 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <title>My Projects</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+    }
+
+    .container{
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding:40px 30px;
+      border-radius:15px;
+      width:90%;
+      max-width:500px;
+      text-align:center;
+      box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      font-size:2.2rem;
+      margin-bottom:10px;
+    }
+
+    p{
+      font-size:0.95rem;
+      opacity:0.9;
+      margin-bottom:25px;
+    }
+
+    ul{
+      list-style:none;
+    }
+
+    li{
+      margin:15px 0;
+    }
+
+    a{
+      display:block;
+      padding:12px 15px;
+      background: #fff;
+      color:#333;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    a:hover{
+      background: #ffda79;
+      transform: translateY(-4px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    footer{
+      margin-top:25px;
+      font-size:0.8rem;
+      opacity:0.8;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Live Projects</h1>
 
-  <ul>
-    <li><a href="calculator/">Calculator App</a></li>
-    <li><a href="Interactive%20quiz/">Interactive Quiz</a></li>
-    <li><a href="Quote%20genrator/">Quote Generator</a></li>
-    <li><a href="To-Do%20list/">To-Do List</a></li>
-  </ul>
+  <div class="container">
+    <h1>✨ My Live Projects ✨</h1>
+    <p>Click on any project to view it live</p>
+
+    <ul>
+      <li><a href="calculator/">🧮 Calculator App</a></li>
+      <li><a href="Interactive%20quiz/">📝 Interactive Quiz</a></li>
+      <li><a href="Quote%20genrator/">💬 Quote Generator</a></li>
+      <li><a href="To-Do%20list/">✅ To-Do List</a></li>
+    </ul>
+
+    <footer>
+      Made with ❤️ by Nisha
+    </footer>
+  </div>
+
 </body>
 </html>
+
