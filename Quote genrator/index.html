@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💭Quote Generator</h1>
+            <p class="subtitle">Get inspired with amazing quotes!</p>
+        </div>
+
+        <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p id="quote">Click the button to get an inspiring quotes!</p>
+            <p id="author"></p>
+        </div>
+
+        <div class="button-container">
+            <button onclick="showQuote()">✨Get New Quote</button>
+            <button class="copy-btn" onclick="copyQuote()">📋Copy Quote</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="count">0</div>
+                <div class="stat-label">Quotes Generated</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number">50</div>
+                <div class="stat-label">Total Quotes</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container{
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    padding: 2.6rem;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle{
+    color: #636e72;
+    font-size: 1.1rem;
+}
+
+.input-box{
+    display: flex;
+    gap: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+input{
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+
+}
+
+.add-btn{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.add-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px RGBA(102, 126, 234, 0.5);
+}
+
+.add-btn:active{
+    transform: translateY(-1PX);
+}
+
+.task-list{
+    list-style: none;
+    max-height: 400PX;
+    overflow-y: auto;
+}
+
+
+.task-list::-webkit-scrollbar{
+    width: 6px;
+}
+
+
+.task-list::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb{
+    background: #667eea;
+    border-radius: 10px;
+}
+
+
+.task-item{
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all0.3s ease;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.task-item:hover{
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-item.completed{
+    opacity: 0.6;
+    background-color: #e8f5e9;
+}
+
+.task-text{
+    flex: 1;
+    font-size: 1.1rem;
+    color: #2d3436;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.task-text.completed{
+    text-decoration: line-through;
+    color: #636e72;
+}
+
+
+.delete-btn{
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover{
+    background-color: #ee5e52;
+    transform: scale(1.05);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #dfe6e9;
+}
+
+.stat-item{
+    text-align: center;
+}
+
+.stat-number{
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label{
+    color: #636e72;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+
+.empty-state{
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #b2bec3;
+}
+
+.empty-icon{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+
+@media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .input-box {
+                flex-direction: column;
+            }
+
+            .add-btn {
+                width: 100%;
+            }
+        }

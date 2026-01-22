@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    padding: 3rem;
+    animation: fadeIn 0.6s ease;
+}
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle{
+    color: #636e72;
+    font-size: 1rem;
+}
+
+
+.input-group{
+    margin-bottom: 1.5rem;
+}
+
+
+label{
+    display: block;
+    font-weight: 800;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+
+input{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    border-color: #00b894;
+    box-shadow: 0 0 0 4px rgba(0, 184, 148, 0.1);
+}
+
+.tip-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.tip-btn{
+    background-color: #f8f9fa;
+    border: 2px solid #dfe6e9;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #2d3436;
+}
+
+.tip-btn:hover{
+    background-color: #00b894;
+    color: white;
+    border-color: #00b894;
+    transform: translateY(-3px);
+}
+
+.tip-btn.active{
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+    border-color: #00b894;
+}
+
+.Calculate-btn{
+    width: 100%;
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 184, 148, 0.3);
+    margin-bottom: 2rem;
+}
+
+
+.Calculate-btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 184, 148, 0.5);
+}
+
+.result{
+    background: linear-gradient(135deg, rgba(0, 184, 148, 0.1) 0%, rgba(0, 206, 201, 0.1) 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 2px solid rgba(0, 184, 148, 0.2);
+}
+
+.result-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(0, 184, 148, 0.2);
+}
+
+
+.result-item:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.result-label{
+    font-size: 1.1rem;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.result-value{
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.total-section{
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+.total-section .result-label{
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.total-section .result-value{
+    color: white;
+    -webkit-text-fill-color: white;
+    font-size: 2.5rem;
+}
+
+
+
+@media (max-width: 600px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tip-buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }

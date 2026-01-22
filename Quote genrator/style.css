@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.container{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    padding: 3rem;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header{
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-size: 3.2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.6rem;
+    font-weight: 900;
+}
+
+.subtitle{
+    color: #636e72;
+    font-size: 1.3rem;
+}
+
+.quote-icon{
+    font-size: 4.8rem;
+    color: #667eea;
+    opacity: 0.2;
+    margin-bottom: 1rem;
+}
+
+.quote-box{
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-radius: 23px;
+    padding: 3rem 2rem;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(120, 126, 234, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #5467bb1a 0%, transparent 170%);
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+#quote{
+    font-size: 1.6rem;
+    color: #2d3436;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#author{
+    font-size: 1.3rem;
+    color: #667eea;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+
+.button-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+button{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(120, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: rgba(255, 255,255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+button:active{
+    transform: translateY(-2px);
+}
+
+
+.copy-btn{
+    background: rgb(255, 255, 255);
+    color: #667eea;
+    border: 3px solid #667eea;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.copy-btn:hover{
+    background-color: #667eea;
+    color: white;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.stat-item{
+    text-align: center;
+}
+
+
+.stat-number{
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label{
+    color: #636e72;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+
+ @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #quote {
+                font-size: 1.2rem;
+            }
+        }

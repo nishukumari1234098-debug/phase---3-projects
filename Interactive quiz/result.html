@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🏆</div>
+        <h1>Quiz Complete!</h1>
+       <div class="score-container">
+        <div class="score-circle">
+            <div class="score-number">0</div>
+            <div class="score-total">Out of 10</div>
+        </div>
+        <div class="score-message"></div>
+        <div class="score-percentage"></div>
+       </div>
+            
+
+        <button class="btn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script>
+        let score = Number(localStorage.getItem("score"));
+        let total = Number(localStorage.getItem("total"))
+
+        let scoreNumber = document.querySelector(".score-number");
+        let scoreTotal = document.querySelector(".score-total");
+        let scoreMessage = document.querySelector(".score-message");
+        let scorePercentage = document.querySelector(".score-percentage");
+
+
+        scoreNumber.innerText = score;
+        scoreTotal.innerText = "Out of " + total;
+
+        let percentage = Math.round((score / total) * 100);
+        scorePercentage.innerText = percentage + "% correct";
+
+        let message = "";
+
+        if(percentage === 100){
+            message = "Outstanding! You're a quiz master! 🌟";
+        }
+        else if (percentage >= 70) {
+          message = "Great job! You did very well! 🎉";
+        } 
+        else if(percentage >= 50){
+            message = "Good effort! Keep practicing! 💪";
+        }
+        else{
+            message = "Keep trying! You'll do better next time! 📚";
+        }
+
+        scoreMessage.innerText = message;
+
+
+
+        function restartQuiz(){
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
